@@ -9,6 +9,7 @@
     color: #112d49;
     background-color: #fbfef9;
     user-select: none;
+    cursor: pointer;
 }
   
 .todoText {

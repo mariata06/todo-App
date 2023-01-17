@@ -12,11 +12,16 @@ function App() {
     setTodos([...todos, text])
   }
 
+  //- обработчик удаления выполненных задач
+  const deleteTodoHandler = (index) => {
+    setTodos(todos.filter((_, idx) => idx !== index))
+  }
+
   return (
     <div className="App">
       <h1>My Todo App on React</h1>
       <TodoForm addTodoItem={addTodoHandler}/>
-      <TodoList todos={todos}/>
+      <TodoList todos={todos} deleteTodoItem={deleteTodoHandler}/>
     </div>
   );
 }
