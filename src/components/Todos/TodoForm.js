@@ -7,7 +7,9 @@ function TodoForm({ addTodoItem }) {
     //- обработчик отправки формы
     const onSubmitHandler = (event) => {
         event.preventDefault();
-        addTodoItem(text);
+        if (text !== "") {
+            addTodoItem(text);
+        }
         setText(''); //- очищение поля ввода
     }
 

@@ -11,7 +11,13 @@
     user-select: none;
     cursor: pointer;
 }
-  
+
+.todoIcon {
+    font-size: 1.8rem;
+    margin-right: 10px;
+    color: teal;
+}
+
 .todoText {
     width: 100%;
     text-align: left;

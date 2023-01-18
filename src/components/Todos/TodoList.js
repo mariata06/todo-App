@@ -9,7 +9,7 @@ function TodoList(props) {
         <div className={styles.todoListContainer}>
             {/* //- если todos.length === 0  */}
             {!todos.length && <h2>Todo List is empty</h2>}
-            {todos.map((item, index) => <Todo key={index} todo={item} index={index} deleteTodo={deleteTodoItem}/>)}
+            {todos.map((todo) => (<Todo key={todo.id} todo={todo} deleteTodo={deleteTodoItem}/>))}
         </div>
     )
 }
