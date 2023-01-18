@@ -16,7 +16,6 @@ function App() {
       id: uuidv4(), //-вызов функции генерации уникального id
     }
 
-    console.log(newTodo);
     setTodos([...todos, newTodo])
   }
 
@@ -25,11 +24,19 @@ function App() {
     setTodos(todos.filter((todo) => todo.id !== id))
   }
 
+  const toggleTodoHandler = (id) => {
+    setTodos(todos.map((todo) =>
+      todo.id === id 
+        ? {...todo, isCompleted: !todo.isCompleted}
+        : {...todo}
+    ))
+  }
+
   return (
     <div className="App">
       <h1>My Todo App on React</h1>
       <TodoForm addTodoItem={addTodoHandler}/>
-      <TodoList todos={todos} deleteTodoItem={deleteTodoHandler}/>
+      <TodoList todos={todos} deleteTodoItem={deleteTodoHandler} toggleTodoItem={toggleTodoHandler}/>
     </div>
   );
 }
