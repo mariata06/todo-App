@@ -1,6 +1,6 @@
-import { RiTodoFill } from "react-icons/ri";
-import { RiDeleteBin2Line } from "react-icons/ri";
-import { FaCheck } from "react-icons/fa";
+import { RiTodoFill } from 'react-icons/ri';
+import { RiDeleteBin2Line } from 'react-icons/ri';
+import { FaCheck } from 'react-icons/fa';
 import styles from './Todo.module.css'
 
 function Todo({ todo, deleteTodo, toggleTodo }) {
