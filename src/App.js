@@ -7,7 +7,23 @@ import './App.css';
 
 function App() {
 
-  const [todos, setTodos] = useState([])
+  const [todos, setTodos] = useState([
+    {
+      text: "Todo one",
+      isCompleted: false,
+      id: uuidv4(), 
+    },
+    {
+      text: "Todo two",
+      isCompleted: false,
+      id: uuidv4(), 
+    },
+    {
+      text: "Todo three",
+      isCompleted: false,
+      id: uuidv4(), 
+    },
+  ])
 
   //- обработчик добавления новой задачи
   const addTodoHandler = (text) => {
